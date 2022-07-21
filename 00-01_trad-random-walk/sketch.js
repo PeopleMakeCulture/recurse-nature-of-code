@@ -18,15 +18,13 @@ function setup(){
 function draw(){
 
   // Q: is there a forEach() in p5?
+  let walkers = [walker_purple, walker_teal, walker_coral]
 
-  walker_purple.step()
-  walker_purple.render(color)
-  
-  walker_teal.step()
-  walker_teal.render(color)
+  walkers.forEach(function(walker){
+    walker.step()
+    walker.render()
+  })
 
-  walker_coral.step()
-  walker_coral.render(color)
 }
 
 class Walker {
